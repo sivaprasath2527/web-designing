@@ -1,7 +1,7 @@
 body {
     /* background-color: yellow; */
     overflow: hidden;
-    background-image: url(shoaibakhtar.jpg);
+    background-image: url(/shoaibakhtar.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
