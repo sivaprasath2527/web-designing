@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<link rel="stylesheet" href="/css/stylesheet.css">
+<link rel="stylesheet" href="/js/script.js">
+
+<body>
+  <div class="cricket">
+    <h2 class="header">PRODUCT</h2>
+  
+  <table class="table1">
+    <tr>
+      <th>PRODUCT NAME</th>
+      <th>QUANTITY</th>
+      <th>PRICE</th>
+    </tr>
+    <tr>
+      <td>SG ball</td>
+      <td>
+        <form name="frm-pin" method="post" action="pin-index.php">
+          <input type="hidden" name="mode" value="pinrequest"/>
+          <label class="w3-text-green"><b>number of balls</b></label>
+          <select name="tot_pin_requested" onchange="calculateAmount(this.value)" required>
+            <option value="disabled selected">choose your option</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+          <script>
+            function calculateAmount(val){
+              var tot_price = val * 250;
+              //display the result
+              var divobj= document.getElementById('tot_amount');
+              divobj.value= tot_price;
+            }
+          </script>
+        </form>
+      </td>
+      <td>
+        <label><b>total amount</b></label>
+          <input class="w3-input w3-border" name="tot_amount" id="tot_amount" type="text" readonly>
+      </td>
+    </tr>
+  </table>
+  
+  <script src="/js/script.js">
+  </script>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+
+ 
